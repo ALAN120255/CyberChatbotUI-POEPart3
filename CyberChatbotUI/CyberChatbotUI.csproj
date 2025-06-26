@@ -1,0 +1,138 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="PROG6221-POEPart1-ST10445966\.git\ms-persist.xml" />
+    <Content Include="PROG6221-POEPart1-ST10445966\.vs\POE\v17\DocumentLayout.backup.json" />
+    <Content Include="PROG6221-POEPart1-ST10445966\.vs\POE\v17\DocumentLayout.json" />
+    <Content Include="PROG6221-POEPart1-ST10445966\.vs\PROG6221-POEPart1\v17\DocumentLayout.backup.json" />
+    <Content Include="PROG6221-POEPart1-ST10445966\.vs\PROG6221-POEPart1\v17\DocumentLayout.json" />
+    <Content Include="PROG6221-POEPart1-ST10445966\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="PROG6221-POEPart1-ST10445966\.github\workflows\main.yml" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\COMMIT_EDITMSG" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\config" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\description" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\FETCH_HEAD" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\HEAD" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\applypatch-msg.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\commit-msg.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\post-update.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\pre-applypatch.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\pre-commit.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\pre-merge-commit.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\pre-push.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\pre-rebase.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\pre-receive.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\push-to-checkout.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\sendemail-validate.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\hooks\update.sample" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\index" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\info\exclude" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\logs\HEAD" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\logs\refs\heads\master" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\logs\refs\remotes\origin\HEAD" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\logs\refs\remotes\origin\master" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\08\57bcf3d6a0ec23afc9c03efb2bd5c45b1f1c97" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\12\110327e19603d3d2cad23eab0a617e990231b4" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\15\f889988b3615ebb06878c8cd83253c7223e800" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\16\3c6ddfac51db65f94b90d5b7050463184d8ee0" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\16\546178796b94d75a5bb4dd38b96cea6005bd58" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\17\820cf410c5e2f1ad732962ce2c55d00df39737" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\1f\97bcb06591a364c6677e92a4be5c7aebcfec24" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\24\470f6f4c7fc9aa1e515b78c77dfd7484d5a250" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\30\0a16555c3e7fbb5999b6a13d8bc57359e096ef" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\30\57655c23415798febb1983bc322afcb2f6f6b2" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\34\0786a55da1a01924b33d8558587e6292ea533e" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\34\ebbfbf4d4f8c2cada512a12dbcb9bea45fe053" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\3b\c7b59c3830850e2479b93f11af80565d05929b" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\41\5e271ea63f6c06259c86e8e4722b756e80e53a" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\43\80832c4dcb86c69677453670ce3211f2a37df4" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\48\ef1fee3d18ddb8834bafe76a3af09640d0ff79" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\4b\35a8d21e947e27900cc6d8f0758b63907c1171" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\4d\419f46de75b95594b3ac5b9afbc4f790c209a1" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\53\7c8bd10937467b0f5a510480e6f3ae2c2774d3" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\54\d1ab9742bcaea196967abaff24c6c31b1922f7" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\5a\96730fac85b01ba187f8fe0b9051d726d0afa1" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\60\849d149423e3a2eb7a63cc9704abbad07ff06d" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\60\eb783d52372cf1b3099ecbc0a95362b72c5dee" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\63\32e1973a8fae26be5aa51517a05225a8598ec4" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\69\ae4b49b4d642ab7381bf7309e2f05be102243d" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\6b\1e00f07df182eddba99c4b146cfeeb9d472e1a" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\79\a3998027acb11da263a7e187d9cd6d26cfead3" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\7b\b2f99a89c16f3ab8a73c5c167b6885f27b9404" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\7e\731eeab27359f50ff4c9e1a73e0fee596266ec" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\8b\d343289e032285575960aeaa97fc6eaf334227" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\8d\60ae883c640aec7aaa24b0fb1809df672c48ce" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\8e\6260f418ba8ff10238650d55cf1556f6887538" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\8f\120edd841670f6b217106901be46045cc61479" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\91\0529f4dadc01c9fcfd07a63b94d9a71af3a2fd" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\a4\285d75f8cfd4706469c0eeec77c4860e05622d" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\a6\88a557af3cc89f8d6d9162c0a14be0c899c1d9" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\ad\d0156f0a214a201e028878a8014a108b0a1f73" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\ae\e3931063eef378222a5016ac84725b464924a0" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\b1\1d79836e067f088d4a48975b120b7e689d0017" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\b5\0040238b965d4d699b1a86054461fdaf665ee7" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\bb\ceb61160437ba7db4f97cf43a7f2a288f72fd4" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\bd\61fe20b5188f1f0bc0ff6f6c3eb83998da0c50" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\c4\4890870a8236ff2052d2b19eff7ccf9807e1ff" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\c7\cad760f3f8b07095cf8546aa8c1d1a2ae4eae8" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\ce\d050f5be511b50587f7dbc879f54020ff295c2" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\d4\1a0d7616e1745d8f83b02d76150a18f625b5a9" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\d9\8372954c4ab9bc4f968e360c1b3026abb6441c" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\e4\72c14bd6026845eda0324d208c4b106a08dcd8" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\e4\f25a7547082dc77fdea822ff04ac4502dd7077" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\ea\6a9c2cebd50389cff8f2621d968733b6ea06c5" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\eb\bd01ac2c0377a54137d956fa2a9e430d84ed2e" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\ee\a700b7e3053c98aa9537b09744f5f957f2334c" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\fe\f20768ccbe536a7e3c7052bd3f73b3f01c99e1" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\pack\pack-c5a42504df370d64cfd6a3f506433366bcf5133b.idx" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\pack\pack-c5a42504df370d64cfd6a3f506433366bcf5133b.pack" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\objects\pack\pack-c5a42504df370d64cfd6a3f506433366bcf5133b.rev" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\ORIG_HEAD" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\packed-refs" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\refs\heads\master" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\refs\remotes\origin\HEAD" />
+    <None Include="PROG6221-POEPart1-ST10445966\.git\refs\remotes\origin\master" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\copilot-chat\f15fc2dd\sessions\a83fbacc-ea8d-4457-b352-88b66bd2e75f" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\CopilotIndices\17.13.441.19478\CodeChunks.db" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\CopilotIndices\17.13.441.19478\CodeChunks.db-shm" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\CopilotIndices\17.13.441.19478\CodeChunks.db-wal" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\CopilotIndices\17.13.441.19478\SemanticSymbols.db" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\CopilotIndices\17.13.441.19478\SemanticSymbols.db-shm" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\CopilotIndices\17.13.441.19478\SemanticSymbols.db-wal" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\DesignTimeBuild\.dtbcache.v2" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\FileContentIndex\348e1b26-4fd4-481c-9d80-8e192238d746.vsidx" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\FileContentIndex\a42a5f9d-efee-4aeb-9e73-37f35142c119.vsidx" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\POE\v17\.futdcache.v2" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\PROG6221-POEPart1\CopilotIndices\17.13.441.19478\CodeChunks.db" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\PROG6221-POEPart1\CopilotIndices\17.13.441.19478\SemanticSymbols.db" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\PROG6221-POEPart1\FileContentIndex\c302e438-3ff4-4797-a7ca-c6c9598de94f.vsidx" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\ProjectEvaluation\poe.metadata.v9.bin" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\ProjectEvaluation\poe.projects.v9.bin" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\ProjectEvaluation\poe.strings.v9.bin" />
+    <None Include="PROG6221-POEPart1-ST10445966\.vs\slnx.sqlite" />
+    <None Include="PROG6221-POEPart1-ST10445966\POE.csproj" />
+    <None Include="PROG6221-POEPart1-ST10445966\POE.sln" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="PROG6221-POEPart1-ST10445966\.git\objects\info\" />
+    <Folder Include="PROG6221-POEPart1-ST10445966\.git\refs\tags\" />
+    <Folder Include="PROG6221-POEPart1-ST10445966\bin\Release\net9.0\" />
+    <Folder Include="PROG6221-POEPart1-ST10445966\obj\Release\net9.0\refint\" />
+    <Folder Include="PROG6221-POEPart1-ST10445966\obj\Release\net9.0\ref\" />
+  </ItemGroup>
+
+</Project>

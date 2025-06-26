@@ -1,0 +1,300 @@
+﻿<Window x:Class="CyberChatbotUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cybersecurity Chatbot"
+        Height="768" Width="1250"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="CanResizeWithGrip"
+        FontSize="15"
+        WindowStartupLocation="CenterScreen"
+        x:Name="mainWindow">
+    <Border CornerRadius="20" Background="WhiteSmoke">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!-- Title Bar -->
+            <Border Background="CornflowerBlue" CornerRadius="20,20,0,0" Grid.Row="0" MouseDown="Border_MouseDown">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
+                        <Button x:Name="MenuToggleButton" Content="☰" Width="35" Height="35" 
+                                Background="Transparent" Foreground="White" BorderThickness="0"
+                                FontSize="18" Click="MenuToggleButton_Click" Margin="0,0,10,0"/>
+                        <TextBlock Text="Cybersecurity Chatbot" FontSize="22" Foreground="White"
+                                   VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0">
+                        <Button Content="–" Width="35" Height="35" Click="MinimizeButton_Click"/>
+                        <Button Content="×" Width="35" Height="35" Click="CloseButton_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Main Content with Sidebar -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Sidebar -->
+                <Border x:Name="SidebarBorder" Grid.Column="0" Background="LightGray" 
+                        Width="250" BorderThickness="0,0,1,0" BorderBrush="Gray">
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=SidebarBorder, Path=Tag}" Value="Hidden">
+                                    <Setter Property="Width" Value="0"/>
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+
+                    <StackPanel Margin="15">
+                        <TextBlock Text="Quick Actions" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+                        <Button Content="💬 Chat" Height="40" Margin="0,5" 
+                                Background="LightBlue" Click="Chat_Click" Tag="Chat"/>
+                        <Button Content="📝 Cybersecurity Quiz" Height="40" Margin="0,5" 
+                                Background="LightBlue" Click="CybersecurityQuiz_Click" Tag="Quiz"/>
+                        <Button Content="🧮 Cybertasks" Height="40" Margin="0,5" 
+                                Background="LightBlue" Click="Cybertasks_Click" Tag="Tasks"/>
+                        <Button Content="🌐 Network Status" Height="40" Margin="0,5" 
+                                Background="LightBlue" Click="NetworkStatus_Click" Tag="Network"/>
+                        <Button Content="📊 Threat Analysis" Height="40" Margin="0,5" 
+                                Background="LightBlue" Click="ThreatAnalysis_Click" Tag="Threat"/>
+                        <Button Content="🔍 Vulnerability Scan" Height="40" Margin="0,5" 
+                                Background="LightBlue" Click="VulnerabilityScan_Click" Tag="Vulnerability"/>
+
+                        <Separator Margin="0,20,0,15"/>
+
+                        <TextBlock Text="Recent Chats" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+                        <ListBox x:Name="RecentChatsListBox" Height="200" Background="White" 
+                                 SelectionChanged="RecentChatsListBox_SelectionChanged">
+                            <ListBoxItem Content="Security Audit Discussion"/>
+                            <ListBoxItem Content="Malware Analysis"/>
+                            <ListBoxItem Content="Firewall Configuration"/>
+                            <ListBoxItem Content="Incident Response Plan"/>
+                        </ListBox>
+
+                        <Separator Margin="0,15,0,15"/>
+
+                        <Button Content="⚙️ Settings" Height="35" Margin="0,5" 
+                                Background="DarkGray" Foreground="White" Click="Settings_Click" Tag="Settings"/>
+                        <Button Content="❓ Help" Height="35" Margin="0,5" 
+                                Background="DarkGray" Foreground="White" Click="Help_Click" Tag="Help"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Main Content Area with TabControl for Page Navigation -->
+                <TabControl x:Name="MainTabControl" Grid.Column="1" Margin="0" 
+                           TabStripPlacement="Top" Background="Transparent"
+                           BorderThickness="0">
+                    <TabControl.Resources>
+                        <Style TargetType="TabItem">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </Style>
+                    </TabControl.Resources>
+
+                    <!-- Chat Page -->
+                    <TabItem x:Name="ChatTab" Header="Chat">
+                        <StackPanel Margin="20,20,20,20">
+                            <TextBlock Text="Cyber Helper" FontSize="56" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                            <TextBlock Text="How may I assist you?" FontSize="35" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                            <ScrollViewer Height="350" VerticalScrollBarVisibility="Auto" Background="WhiteSmoke" Padding="10">
+                                <StackPanel x:Name="ChatStack" />
+                            </ScrollViewer>
+                            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                                <TextBox x:Name="InputTextBox" Width="700" Height="90" AcceptsReturn="True"
+                                         TextWrapping="Wrap" Background="LightSkyBlue" FontSize="16" Padding="10"
+                                         VerticalAlignment="Bottom" KeyDown="InputTextBox_KeyDown"
+                                         ToolTip="Type your message here. Press Enter to send."/>
+                                <Button Content="Send" Width="70" Height="40" FontSize="16"
+                                        Background="CornflowerBlue" Foreground="White" Margin="10,0,0,0"
+                                        VerticalAlignment="Bottom" Click="SendButton_Click"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </TabItem>
+
+                    <!-- Quiz Page -->
+                    <TabItem x:Name="QuizTab" Header="Quiz">
+                        <StackPanel Margin="20">
+                            <TextBlock Text="Cybersecurity Quiz" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                            <TextBlock Text="Test your cybersecurity knowledge" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,30"/>
+
+                            <Border Background="WhiteSmoke" Padding="20" CornerRadius="10">
+                                <StackPanel>
+                                    <TextBlock Text="Question 1:" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="What does 'phishing' refer to in cybersecurity?" FontSize="14" Margin="0,0,0,15"/>
+
+                                    <RadioButton Content="A) Catching fish with digital nets" Margin="0,5"/>
+                                    <RadioButton Content="B) Fraudulent attempts to obtain sensitive information" Margin="0,5"/>
+                                    <RadioButton Content="C) A type of computer virus" Margin="0,5"/>
+                                    <RadioButton Content="D) Network fishing protocols" Margin="0,5"/>
+
+                                    <Button Content="Submit Answer" Width="120" Height="35" Margin="0,20,0,0" 
+                                            Background="CornflowerBlue" Foreground="White"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </TabItem>
+
+                    <!-- Tasks Page -->
+                    <TabItem x:Name="TasksTab" Header="Tasks">
+                        <StackPanel Margin="20">
+                            <TextBlock Text="Cybersecurity Tasks" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                            <Border Background="WhiteSmoke" Padding="20" CornerRadius="10">
+                                <StackPanel>
+                                    <TextBlock Text="Current Tasks:" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+                                    <CheckBox Content="Update firewall rules" Margin="0,5"/>
+                                    <CheckBox Content="Review security logs" Margin="0,5"/>
+                                    <CheckBox Content="Patch management review" Margin="0,5"/>
+                                    <CheckBox Content="User access audit" Margin="0,5"/>
+                                    <CheckBox Content="Backup verification" Margin="0,5"/>
+
+                                    <Button Content="Add New Task" Width="120" Height="35" Margin="0,20,0,0" 
+                                            Background="CornflowerBlue" Foreground="White"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </TabItem>
+
+                    <!-- Network Status Page -->
+                    <TabItem x:Name="NetworkTab" Header="Network">
+                        <StackPanel Margin="20">
+                            <TextBlock Text="Network Status" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Column="0" Background="LightGreen" Padding="15" Margin="10" CornerRadius="10">
+                                    <StackPanel>
+                                        <TextBlock Text="Firewall Status" FontSize="16" FontWeight="Bold"/>
+                                        <TextBlock Text="Active" FontSize="14" Margin="0,5,0,0"/>
+                                        <TextBlock Text="Last Updated: 2 hours ago" FontSize="12"/>
+                                    </StackPanel>
+                                </Border>
+
+                                <Border Grid.Column="1" Background="LightCoral" Padding="15" Margin="10" CornerRadius="10">
+                                    <StackPanel>
+                                        <TextBlock Text="Intrusion Detection" FontSize="16" FontWeight="Bold"/>
+                                        <TextBlock Text="3 Alerts" FontSize="14" Margin="0,5,0,0"/>
+                                        <TextBlock Text="Requires Attention" FontSize="12"/>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </StackPanel>
+                    </TabItem>
+
+                    <!-- Threat Analysis Page -->
+                    <TabItem x:Name="ThreatTab" Header="Threat">
+                        <StackPanel Margin="20">
+                            <TextBlock Text="Threat Analysis" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                            <Border Background="WhiteSmoke" Padding="20" CornerRadius="10">
+                                <StackPanel>
+                                    <TextBlock Text="Recent Threats:" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+                                    <Border Background="LightYellow" Padding="10" Margin="0,5" CornerRadius="5">
+                                        <TextBlock Text="Medium Risk: Suspicious email attachment detected"/>
+                                    </Border>
+
+                                    <Border Background="LightCoral" Padding="10" Margin="0,5" CornerRadius="5">
+                                        <TextBlock Text="High Risk: Multiple failed login attempts from unknown IP"/>
+                                    </Border>
+
+                                    <Border Background="LightGreen" Padding="10" Margin="0,5" CornerRadius="5">
+                                        <TextBlock Text="Low Risk: Outdated software detected on workstation"/>
+                                    </Border>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </TabItem>
+
+                    <!-- Vulnerability Scan Page -->
+                    <TabItem x:Name="VulnerabilityTab" Header="Vulnerability">
+                        <StackPanel Margin="20">
+                            <TextBlock Text="Vulnerability Scan" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                            <Border Background="WhiteSmoke" Padding="20" CornerRadius="10">
+                                <StackPanel>
+                                    <TextBlock Text="Last Scan: Today 09:30 AM" FontSize="16" Margin="0,0,0,15"/>
+
+                                    <ProgressBar Height="20" Value="75" Margin="0,10"/>
+                                    <TextBlock Text="Scan Progress: 75%" HorizontalAlignment="Center" Margin="0,5,0,15"/>
+
+                                    <Button Content="Start New Scan" Width="120" Height="35" 
+                                            Background="CornflowerBlue" Foreground="White"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </TabItem>
+
+                    <!-- Settings Page -->
+                    <TabItem x:Name="SettingsTab" Header="Settings">
+                        <StackPanel Margin="20">
+                            <TextBlock Text="Settings" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                            <Border Background="WhiteSmoke" Padding="20" CornerRadius="10">
+                                <StackPanel>
+                                    <TextBlock Text="Application Settings:" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+                                    <CheckBox Content="Enable notifications" Margin="0,5"/>
+                                    <CheckBox Content="Auto-update security definitions" Margin="0,5"/>
+                                    <CheckBox Content="Dark mode" Margin="0,5"/>
+
+                                    <Separator Margin="0,15"/>
+
+                                    <TextBlock Text="Security Level:" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <ComboBox Width="200" HorizontalAlignment="Left">
+                                        <ComboBoxItem Content="Low"/>
+                                        <ComboBoxItem Content="Medium" IsSelected="True"/>
+                                        <ComboBoxItem Content="High"/>
+                                    </ComboBox>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </TabItem>
+
+                    <!-- Help Page -->
+                    <TabItem x:Name="HelpTab" Header="Help">
+                        <StackPanel Margin="20">
+                            <TextBlock Text="Help &amp; Support" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                            <Border Background="WhiteSmoke" Padding="20" CornerRadius="10">
+                                <StackPanel>
+                                    <TextBlock Text="Frequently Asked Questions:" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+                                    <Expander Header="How do I run a vulnerability scan?" Margin="0,5">
+                                        <TextBlock Text="Click on 'Vulnerability Scan' in the sidebar, then click 'Start New Scan' button." 
+                                                   TextWrapping="Wrap" Margin="10"/>
+                                    </Expander>
+
+                                    <Expander Header="What should I do if a threat is detected?" Margin="0,5">
+                                        <TextBlock Text="Review the threat details in the Threat Analysis section and follow the recommended actions." 
+                                                   TextWrapping="Wrap" Margin="10"/>
+                                    </Expander>
+
+                                    <Expander Header="How often should I update security settings?" Margin="0,5">
+                                        <TextBlock Text="It's recommended to review security settings monthly and update as needed." 
+                                                   TextWrapping="Wrap" Margin="10"/>
+                                    </Expander>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
